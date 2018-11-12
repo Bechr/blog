@@ -1,0 +1,10 @@
+<li [ngClass]="{ 'list-group-item' :true ,
+ 'list-group-item-success' : loveNbr > 0 , 
+ 'list-group-item-danger' : loveNbr < 0 }" class="PostItem">
+
+ <h4 [ngStyle]="{color:getColor()}">{{PostTitle}}  <span style="float: right;">{{PostDate | date:'short'}}</span></h4>
+ <p>{{Content}}</p>
+ <p> {{loveNbr}}</p>
+<button class="btn btn-success" (click)="LovePlus()">Love it</button>
+<button class="btn btn-danger" (click)="LoveMinus()" style="margin-left: 8px;">D'ont love it</button>
+</li>
